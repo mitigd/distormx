@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/distorm3**",
+        "${workspaceFolder}/distorm3/include/**",
+        "C:/msys64/mingw32/include/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:/msys64/mingw32/bin/gcc.exe",
+      "compilerArgs": ["-Wall", "-Wconversion"],
+      "cStandard": "c11",
+      "intelliSenseMode": "gcc-x86"
+    },
+    {
+      "name": "x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/include/**",
+        "${workspaceFolder}/distorm3**",
+        "${workspaceFolder}/distorm3/include/**",
+        "C:/msys64/mingw64/include/**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:/msys64/mingw64/bin/gcc.exe",
+      "compilerArgs": ["-Wall", "-Wconversion"],
+      "cStandard": "c11",
+      "intelliSenseMode": "gcc-x64" 
+    }
+  ],
+  "version": 4
+}

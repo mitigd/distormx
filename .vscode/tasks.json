@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Wipe & Build x86",
+      "type": "shell",
+      "command": "meson setup build_x86 --cross-file cross_x86.txt --wipe ; cd build_x86 ; ninja install",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the project for x86 architecture"
+    },
+    {
+      "label": "Wipe & Build x64",
+      "type": "shell",
+      "command": "meson setup build_x86_64 --cross-file cross_x64.txt --wipe ; cd build_x86_64 ; ninja install",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the project for x86_64 architecture"
+    },    
+    {
+      "label": "Build x86",
+      "type": "shell",
+      "command": "cd build_x86 ; ninja install",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the project for x86 architecture"
+    },
+    {
+      "label": "Build x64",
+      "type": "shell",
+      "command": "cd build_x86_64 ; ninja install",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the project for x86_64 architecture"
+    },
+    {
+      "label": "Wipe & Build x86 Example",
+      "type": "shell",
+      "command": "cd examples/win32 ; meson setup build_x86 --cross-file cross_x86.txt --wipe ; cd build_x86 ; ninja",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the win32 example for x86 architecture" 
+    },
+    {
+      "label": "Wipe & Build x64 Example", 
+      "type": "shell",
+      "command": "cd examples/win32 ; meson setup build_x86_64 --cross-file cross_x64.txt --wipe ; cd build_x86_64 ; ninja",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the win32 example for x86_64 architecture" 
+    },    
+    {
+      "label": "Build x86 Example",
+      "type": "shell",
+      "command": "cd examples/win32/build_x86 ; ninja",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the win32 example for x86 architecture"
+    },
+    {
+      "label": "Build x64 Example", 
+      "type": "shell",
+      "command": "cd examples/win32/build_x86_64 ; ninja",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build the win32 example for x86_64 architecture" 
+    }
+  ]
+}
